@@ -1,0 +1,59 @@
+body{
+    background-color: whitesmoke;
+}
+
+.class1{
+    width: 800px;
+    height: 400px;
+    
+    margin: auto;
+    display: flex;
+}
+.class2{
+    width: 49%;
+    height: 95%;
+    border: 1px solid rgb(219, 212, 212);
+    
+}
+.s{
+    width: 90%;
+    margin: auto;
+    height: 30%;
+    gap: 1%;
+    
+    margin-top: 4px;
+    
+    
+}
+.p1{
+    color: red;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+input{
+    margin: 30px;
+    margin-left: 100px;
+    margin-bottom: -10px;
+    padding: 3px;
+}
+.class3{
+    text-align: center;
+    text-decoration: red underline;
+}
+.class4{
+    margin-left: 80px;
+}
+.class5{
+    margin-left: 35%;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    background-color: tomato;
+}
+.class6{
+    text-align: center;
+}

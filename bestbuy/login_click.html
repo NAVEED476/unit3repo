@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup_click</title>
+    <link rel="stylesheet" href="login_click.css">
+</head>
+
+<body>
+
+    <div id="maindiv"></div>
+    <button>click</button>
+</body>
+
+</html>
+<script>
+    document.querySelector("button").addEventListener("click", myfun)
+
+    function myfun() {
+        var div1 = document.createElement("div")
+        div1.setAttribute("class", "class1")
+
+        var div2 = document.createElement("div")
+        div2.setAttribute("class", "class2")
+        var div3 = document.createElement("div")
+        div3.setAttribute("class", "class2")
+
+        var img = document.createElement("img")
+        img.src = "https://www.1mg.com/images/login-signup/Home-Delivery-of-Medicines.png"
+        img.src = "https://www.1mg.com/images/login-signup/Health-Related-Queries.png"
+        img.src = "https://www.1mg.com/images/login-signup/Your-Go-To-Health-App.png"
+        img.src = "https://www.1mg.com/images/login-signup/Know-Your-Medicines.png"
+        img.src = "https://www.1mg.com/images/login-signup/Lab-Tests-at-Home.png"
+        div2.textContent = ""
+        div2.append(img)
+
+        var sign = document.createElement("div")
+        sign.setAttribute("class","s")
+        var p=document.createElement("p")
+        p.textContent="LOGIN"
+
+        p.setAttribute("class","p1")
+        
+        
+
+        var para=document.createElement("p")
+        para.textContent="Get access to your orders, lab tests & doctor consultations"
+        
+        var enter = document.createElement("div")
+        enter.setAttribute("class","s")
+        var input=document.createElement("input")
+        var p2=document.createElement("p")
+        p2.textContent="Enter  Mobile Number / Email Id"
+        p2.setAttribute("class","class3")
+
+        var p3=document.createElement("none")
+        p3.textContent="Are you a Health care Professional"
+        p3.setAttribute("class","class4")
+
+        var cont = document.createElement("div")
+
+        var b=document.createElement("button")
+        b.textContent="LOGIN"
+
+
+        var p4=document.createElement("p")
+        p4.textContent="Have Account? Login"
+        p4.setAttribute("class","class6")
+        var p5=document.createElement("p")
+        p5.textContent="For Corporate Sign Up"
+        p5.setAttribute("class","class6")
+        b.setAttribute("class","class5")
+        cont.setAttribute("class","s")
+        sign.append(p,para)
+        enter.append(input,p2,p3)
+
+        div3.append(sign, enter, cont)
+        div1.append(div2, div3)
+        cont.append(b,p4,p5)
+
+
+        maindiv.append(div1)
+
+    }
+</script>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creat Best Buy Account</title>
+    <style>
+        
+         #cont1{
+            display: flex;
+            background-color: #1976D2;
+            height: 100px;
+        }
+        #symbolbtn{
+            width: 90px;
+            height: 70px;
+        }
+        #symbol{
+            width: 100%;
+            height: 100%;
+            margin-top: 10%;
+        }
+        
+        #page{
+            background-color: white;
+            width: 30%;
+            text-align: center;
+            margin-left: 35%;
+            margin-top: 3%;
+            border-radius: 10px;
+        }
+        #cont2{
+            width: 100%;
+            height: 1000px;
+            margin-top: -15px;
+        }
+        form>input{
+            width: 75%;
+            margin-top: 4%;
+            height: 35px;
+            border-radius: 6px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: 600;
+        }
+        form>button{
+            color: white;
+            background-color: #304FFE;
+            margin-top: 4%;
+            height: 37px;
+            width: 78%;
+            border-radius: 7px;
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div id="cont2">
+        <div id="page" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            <h1>Create an Account</h1>
+            <p>Shopping for your business? Create a business account.</p>
+            <form>
+                <input type="text" id="firstname" placeholder="First Name" />
+                <br/>
+                <input type="text" id="email" placeholder="Email Address" />
+                <br/>
+                <input type="password" id="password" placeholder="password">
+                <br/>
+                <input type="password" id="confirmpassword" placeholder="Confirm password">
+                <br/>
+                <input type="number" id="number" placeholder="Mobile Phone Number">
+                <br/>
+                <button onclick="createaccount(event)">Create an Account</button>
+                <hr/>
+                <p>Or</p>
+                <button style="margin-top: -10px;">Sign up With Google Account</button>
+                <hr/>
+                <a href="signin.html">Already have an account? Sign in</a>
+            </form>
+        </div>
+    </div>
+
+
+    
+    
+</body>
+</html>
+<script>
+    function createaccount(e){
+        //e.preventDefault();
+        let firstname = document.getElementById("firstname").value;
+        //console.log(name)
+        let lastname = document.getElementById('lastname').value;
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+        let confirmpassword = document.getElementById('confirmpassword').value;
+        let number = document.getElementById('number').value;
+
+
+        if(localStorage.getItem("bestbuyuserdata") === null){
+            localStorage.setItem("bestbuyuserdata", JSON.stringify([]));
+        }
+
+
+        let user = {
+            name: firstname,
+            email : email,
+            password : password,
+            number: number
+        }
+        if(firstname == "" || email == "" || password == "" || confirmpassword == "" || number == ""){
+            alert("Incomplete Credentials")
+        } else if(password != confirmpassword){
+            alert('Password Not matching')
+        } else {
+            let arr = JSON.parse(localStorage.getItem("bestbuyuserdata"));
+            arr.push(user)
+            localStorage.setItem("bestbuyuserdata", JSON.stringify(arr));
+            firstname = "";
+            email = "";
+            password = "";
+            confirmpassword = "";
+            number = "";
+        }
+    } 
+</script>

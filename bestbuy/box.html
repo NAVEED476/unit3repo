@@ -1,0 +1,90 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <style>
+        .box {
+            width: 250px;
+            height: 150px;
+            border: 1px solid black;
+            border-radius: 20px;
+            display: flex;
+            padding: 5px;
+        }
+
+        .box1 {
+            margin-left: 2px;
+            margin-top: 5px;
+        }
+
+        .box2 {
+            margin-top: 20px;
+            margin-left: 20px;
+            font-size: 18px;
+            display: flex;
+        }
+
+        .font {
+            background-color: burlywood;
+        }
+
+        .top {
+            margin-top: 40px;
+            margin-left: 2px;
+        }
+
+        .strike {
+            background-color: none;
+            text-decoration: line-through;
+        }
+
+        b {
+            font-size: large;
+        }
+
+        .off {
+            border: dotted;
+            color: cadetblue;
+            margin-top: 90px;
+            margin-left: -100px;
+
+        }
+        .box:hover{
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxx">
+        <div class="box">
+            <div class="box1">
+                <h3>X-Ray Chest PA View</h3>
+                <p>provided 10 labs</p>
+                <p class="top"><b>210</b>
+                    <span class="strike">350</span>
+                </p>
+            </div>
+            <div class="box2">
+                <div>
+                    <span class="font"><i class="fas fa-shield-alt">SAFE</i></span>
+                    
+                </div>
+                <div>
+                    <p class="off">40% off</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>
+

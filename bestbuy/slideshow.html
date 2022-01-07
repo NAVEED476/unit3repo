@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slideshow</title>
+    <style>
+        #main {
+            width: 800px;
+            height: 400px;
+            margin: auto;
+            border: 1px solid black;
+
+        }
+
+       
+        .left_button,.right_button{
+            position: absolute;
+            margin: auto;
+            font-weight: bold;
+            margin-top: 10%;
+            font-size: 32px;
+            background-color: black;
+            color: white;
+            border-radius: 100%;
+            padding:10px ;
+        }
+        .right_button{
+            margin-left: 51%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main"></div>
+</body>
+
+</html>
+
+<script>
+    var parent=document.getElementById("main")
+    var images = [
+        "https://images.unsplash.com/photo-1636541745435-fdfeb585e603?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60",
+        "https://images.unsplash.com/photo-1633113211800-4acbb59fc254?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60",
+        "https://images.unsplash.com/photo-1636588118142-775d528a61a7?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60",
+        "https://images.unsplash.com/photo-1636638438860-201c85e81320?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+
+    ]
+
+    function slideshow(){
+        var div=document.createElement("div")
+    var p=document.createElement("p")
+    var p1=document.createElement("p")
+    p.innerHTML="&#10094;"
+    p.setAttribute("class","left_button")
+    p1.innerHTML="&#10095;"
+    p1.setAttribute("class","right_button")
+
+    p.addEventListener("click",function(){
+        p.style.color="red"
+    })
+    div.append(p,p1)
+    parent.append(div)
+    }
+
+</script>

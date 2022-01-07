@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="main_page.css">
+    <style>
+        img:hover{
+            transform: scale(0.9);
+            
+        }
+        button{
+            border: none;
+        }
+        #heading2 > div >a:hover{
+            background-color: #FF7043;
+            color: white;
+            transition: background-color .4s;
+        }
+        button{
+            box-shadow: 1.5px 1.5px red, -0.1em 0 .05em olive;
+        }
+        button:hover{
+            background-color: #FFF176;
+            color: black;
+            transition: background-color .5s;
+        }
+        #heading{
+            background-color: #1976D2;
+        }
+        #heading1, #heading2{
+            display: flex;
+        }
+        .bestbuyimg{
+            background-color: #1976D2;
+            
+            margin: auto;
+        }
+        #bestbuyimg{
+            background: #1976D2;
+           
+            height: 60px;
+            margin: 5% 0 1% 12%;
+        }
+        #menu{
+            margin: 2% 0 0 -13%;
+            height: 30px;
+            background: #1976D2;
+            color: white;
+            font-weight: 600;
+            font-family: inherit;
+            font-size: 22px;
+        } 
+        #searchoption{
+            display: flex;
+            height: 30px;
+            width: 35%;
+            margin: 1.6% 0 0 3%;
+            border-radius: 20px;
+        }
+        #searchbestbuy{
+            height: 100%;
+            width: 93%;
+            border-radius: 5px;
+            font-weight: 600;
+            font-family: inherit;
+            font-size: inherit;
+        }
+        #searchbestbuysy{
+            height: 35px;
+            border-radius: 5px;
+            width: 7%;
+        }
+        #aiea{
+            margin: 1.5% 0 0 15%;
+            height: 40px;
+            background-color: #1976D2;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 700;
+            font-size: 22px;
+        }
+        #heading2{
+            display: flex;
+            margin: 1% 0 0 3%;
+            vertical-align: middle;
+        }
+        #heading2>div:nth-child(1){
+           margin: 0 8% 0 0;
+           display: flex;
+           width: 60%;
+        }
+        #heading2>div:nth-child(2){
+           display: flex;
+           width: 30%;
+        }
+        .deals{
+           background-color: #1976D2;
+           margin-bottom: 1.5%;
+           margin-right: 2%;
+           font-weight: 500;
+           font-size: 14px;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        .account{
+           background-color: #1976D2;
+           margin-bottom: 2.5%;
+           margin-right: 2%;
+           font-size: 14px;
+           font-weight: 800;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #cont2{
+            margin-top: 10.3%;
+            width: 28%; 
+            margin-left: 60%;
+        }
+        .continueshop{
+            background-color: #1976D2;
+            height: 5%;
+            width: 70%;
+            margin-left: 15%;
+            color: white;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 10px;
+        }
+        /* #firstbox,#thirdbox,#secondbox{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        } */
+
+    </style>
+</head>
+<body>
+    <div id="cont" style="margin-left: 2%;"></div>
+    <div id="maincont" style="display: flex;">
+        
+        <div id="cont1"></div>
+    
+            
+        
+    </div>
+
+    <div id="firstbox"></div>
+    <div id="secondbox"></div>
+    <div id="thirdbox"></div>
+    <div id="fourthbox"></div>
+    <div id="fifth"></div>
+    <div id="six"></div>
+    <div id="seven"></div>
+    <div id="eight"></div>
+    <div id="nine"></div>
+    <div id="ten"></div>
+    <div id="eleven"></div>
+
+    
+        <div id="cont2">
+            <h2 style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Order Summary</h2>
+            <hr/>
+            <div style="display: flex;">
+                <h3 style="margin-left: 8%;">Total Amount</h3>
+                <h3 style="margin-left: 40%;">&#36;</h3>
+                <h3 id="totalprice"></h3>
+            </div>
+            <a href="main_page.html"><button class="continueshop" style="height: 40px;">Continue Shopping </button></a> 
+            <br/>
+            <a href="payment.html"><button class="continueshop" onclick="makepayment()" style="margin-top: 3%; height: 40px;">Make Payment</button></a>
+            
+
+
+            <img src="https://img.freepik.com/free-vector/promo-code-sale-banner_180786-45.jpg?size=626&ext=jpg" style="height: 10%; width: 100%;margin-top: 3%;"/>
+            <h3 style="margin-left: 15%;">Save upto 30%</h3>
+            <form onsubmit="checkpromo(event)" id="checkpro">
+                <input type="text" id="promo" placeholder="Enter Promo Code" style="width: 70%; height: 20px; margin-left: 15%;"/>
+                <input type="submit" style="margin-left: 45%; margin-top: 2%;"/>
+            </form>
+            <hr/>
+            <h3 style="margin-left: 8%;">Looking for a lease to own option?</h3>
+            <p style="margin-left: 8%;">Enjoy the tech you want today. Learn more ></p>
+        </div>
+    </div>
+
+
+
+
+    <hr/>
+    
+    
+</body>
+</html>
+<script>
+
+// var parent1 = document.getElementById("firstbox")
+
+// let cart=JSON.parse(localStorage.getItem("cart"))
+
+
+// function showproducts1() {  
+//     cart.forEach(function (product1) {
+//         let div = document.createElement("div")
+
+//         div.setAttribute("class", "bordercreate1")
+
+//         let img = document.createElement("img")
+
+//         img.src = product1.img
+
+
+
+
+//         let p = document.createElement("p")
+//         p.textContent = product1.name
+//         p.style.fontWeight = "15px"
+
+
+//         // var div2=document.createElement("div")
+//         // div2.setAttribute("class","btn")
+//         // div2.textContent="click"
+
+//         var btn=document.createElement("button")
+//         btn.innerHTML="Add to Cart"
+//         btn.setAttribute("class","btn_text")
+
+//         btn.onclick=function(){
+//             console.log("hi")
+//         }
+        
+//         div.append(img, p,btn)
+
+
+//         parent1.append(div)
+
+
+//     })
+// }
+// showproducts1()
+
+var parent2 = document.getElementById("secondbox")
+let cart=JSON.parse(localStorage.getItem("cart1"))
+//console.log(cart1)
+
+
+function showproducts2() {
+    cart.forEach(function (product) {
+        let div = document.createElement("div")
+
+
+        div.setAttribute("class", "bordercreate1")
+
+        let img = document.createElement("img")
+        img.src = product.img
+
+        let div1 = document.createElement("div")
+
+        div1.style.marginTop = "2px"
+
+        let name = document.createElement("p")
+        name.textContent = product.name
+
+        name.style.fontWeight = "15px"
+
+        
+        let para = document.createElement("p")
+        para.textContent = product.para
+        para.style.fontSize="14px"
+
+        let price = document.createElement("p")
+        price.textContent = product.cost
+
+        price.style.fontWeight = "15px"
+
+        price.style.marginTop = "-0px"
+        div1.append(name, para, price)
+
+
+        var btn=document.createElement("button")
+        btn.innerHTML="Add to Cart"
+        btn.setAttribute("class","btn_text")
+
+        btn.onclick=function(){
+            addtocart(product1)
+        }
+        div.append(img, div1)
+
+        parent2.append(div)
+    })
+}
+
+showproducts2()
+
+
+// var parent3 = document.getElementById("thirdbox")
+
+
+// var cart1=JSON.parse(localStorage.getItem("cart1"))
+
+// function showproducts3() {
+//     cart1.forEach(function (product) {
+//         var div = document.createElement("div")
+//         div.setAttribute("class", "bordercreate1")
+
+
+//         var name = document.createElement("p")
+
+//         name.textContent = product.name
+//         name.style.fontWeight = "15px"
+        
+
+//         var img = document.createElement("img")
+        
+
+//         img.src = product.img
+
+//         var para = document.createElement("p")
+//         para.textContent = product.para
+//         para.style.fontSize="14px"
+
+//         var cost = document.createElement("p")
+//         cost.textContent = product.cost
+//         cost.style.fontWeight = "15px"
+
+//         var btn=document.createElement("button")
+//         btn.textContent="add to cart"
+//         btn.setAttribute("class","btn_text")
+//         btn.onclick=function(){
+//             addtocart(product)
+//         }
+
+//         div.append(img, name, para, cost,btn)
+
+//         parent3.append(div)
+//     })
+// }
+
+
+
+
+// showproducts3()
+
+
+
+
+    let cont = document.getElementById('cont')
+    let cont1 = document.getElementById('cont1')
+    cont1.style.margin = "2%"
+    
+    cont1.style.display = "grid";
+    cont1.style.gridTemplateColumns = "auto auto auto auto auto";
+    let cont2 = document.getElementById('cont2')
+    let data = JSON.parse(localStorage.getItem("cart1"));
+    let div1 = document.createElement('div')
+    let msg = document.createElement('h2')
+
+
+    /// for cart data is empty or not
+
+
+    msg.innerText = "Ooops! Your Cart is empty";
+    msg.style.fontFamily = "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
+    let msg1 = document.createElement('p')
+    msg1.innerText = "Just browsing? You can create an account and start earning reward points whenever you make a purchase."
+    msg.style.marginTop = "-2%"
+    msg1.style.marginTop = "-1%"
+
+    if(data == null){
+        div1.append(msg, msg1)
+        cont.append(div1)
+        cont.style.marginTop = "3%"
+    }
+    if(data.length == 0){
+        div1.append(msg, msg1)
+        cont.append(div1)
+        cont.style.marginTop = "3%"
+    }
+    
+
+
+    let div2 = document.createElement('div');
+    let num = document.createElement('h2');
+    let no = document.createElement('h2')
+    num.innerHTML = "Number Of items in Cart : &nbsp;";
+    no.innerText = data.length;
+
+    let numdiv = document.createElement('div')
+
+    numdiv.append(num, no)
+    numdiv.style.display = "flex"
+    if(data.length>0){
+        div2.append(numdiv, msg1)
+        cont.append(div2)
+    }
+   
+    
+//promo function
+
+    let c = 0;
+    function checkpromo(e){
+        e.preventDefault();
+        let input = document.getElementById('checkpro')
+        let promo = input.promo.value;
+        let tot = document.getElementById('totalprice')
+        //c++
+        if(promo == "masai"){
+            if(c==0){
+                tot.innerHTML = tot.innerHTML*0.7;
+            c++;
+            } else if(c>0){
+                alert('You have entered same promo code twice')
+                tot.textContent = tot.textContent;
+            }
+           
+            input.promo.value = "";
+        } else {
+            alert("Invalid Promocode")
+            input.promo.value = "";
+        }
+    }
+
+    //price function
+    let tot = 0;
+    let totalprice = document.getElementById("totalprice")
+        
+        let par1 = JSON.parse(localStorage.getItem("cart1"))
+        par1.forEach(function(par){
+            tot += Number(par.cost);
+            console.log(tot)
+        })
+        //var sum=par1.cost
+       
+
+        var sum=0
+      for(var i=0;i<10;i++){
+          sum+=+par1[i].cost
+      }
+     
+      totalprice.append(sum)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    if(localStorage.getItem("payment") === null){
+            localStorage.setItem("payment", JSON.stringify([]));
+        }
+    let pay = document.getElementById('totalprice').innerHTML;
+    //console.log(pay)
+    function makepayment(){
+        //e.preventDefault();
+
+        
+        var amount = {
+            price: pay
+        }
+        var arr = JSON.parse(localStorage.getItem("payment"))
+        arr.push(amount);
+        localStorage.setItem("payment", JSON.stringify(arr));
+
+        window.location.href = "payment.html"
+    }
+</script>
